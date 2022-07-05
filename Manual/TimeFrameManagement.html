@@ -1,0 +1,449 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '///gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https:///css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Important Classes - Time and frame rate management - Unity 手册">
+<title>Important Classes - Time and frame rate management - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2021.2/uploads/Main/time-flowchart.png">
+<meta name="description" content="Unity 的 Time 类提供许多重要的基本属性，允许您在项目中使用与时间相关的值。">
+<meta property="og:description" content="Unity 的 Time 类提供许多重要的基本属性，允许您在项目中使用与时间相关的值。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'TimeFrameManagement';
+      if(!page) page = 'index';
+      var version = '2021.2';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2021.2/Manual/TimeFrameManagement.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2021.2/Manual/TimeFrameManagement.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2021.2/Manual/TimeFrameManagement.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2021.2/Manual/TimeFrameManagement.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2021.2/Manual/TimeFrameManagement.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2021.2/Manual/TimeFrameManagement.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2021.2/Manual/TimeFrameManagement.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2021.2/Documentation/Manual/TimeFrameManagement.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="///ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/TimeFrameManagement.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/TimeFrameManagement.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/TimeFrameManagement.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/TimeFrameManagement.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/TimeFrameManagement.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/TimeFrameManagement.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TimeFrameManagement.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/TimeFrameManagement.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TimeFrameManagement.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TimeFrameManagement.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TimeFrameManagement.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TimeFrameManagement.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TimeFrameManagement.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TimeFrameManagement.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TimeFrameManagement.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TimeFrameManagement.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TimeFrameManagement.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TimeFrameManagement.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TimeFrameManagement.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/TimeFrameManagement.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.2/Documentation/Manual/TimeFrameManagement.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.2/Manual/TimeFrameManagement.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.2/Manual/TimeFrameManagement.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.2/Manual/TimeFrameManagement.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.2/Manual/TimeFrameManagement.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.2/Manual/TimeFrameManagement.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/TimeFrameManagement.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/TimeFrameManagement.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/TimeFrameManagement.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/TimeFrameManagement.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/TimeFrameManagement.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/TimeFrameManagement.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TimeFrameManagement.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/TimeFrameManagement.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TimeFrameManagement.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TimeFrameManagement.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TimeFrameManagement.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TimeFrameManagement.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TimeFrameManagement.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TimeFrameManagement.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TimeFrameManagement.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TimeFrameManagement.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TimeFrameManagement.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TimeFrameManagement.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TimeFrameManagement.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/TimeFrameManagement.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.2</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingImportantClasses.html">重要的类</a></li>
+<li>Important Classes - Time and frame rate management</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-ScriptableObject.html"></a></span><div class="tip">ScriptableObject</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Mathf.html"></a></span><div class="tip">重要的类 - Mathf</div>
+</div>
+</div></div>
+<h1>Important Classes - Time and frame rate management</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Time 类</h2>
+
+<p>Unity 的 Time 类提供许多重要的基本属性，允许您在项目中使用与时间相关的值。</p>
+
+<p><a href="../ScriptReference/Time.html">时间脚本参考页面</a>每个成员的描述是不言自明的，这是了解它们的最佳场所。</p>
+
+<p>这里列出了一小部分示例，以提供常见和典型用途的概念：</p>
+
+<p><a href="../ScriptReference/Time-time.html"><code>Time.time</code></a> 返回自项目开始播放以来的时间量。</p>
+
+<p><a href="../ScriptReference/Time-deltaTime.html"><code>Time.deltaTime</code></a> 返回自上一帧完成以来经过的时间量。</p>
+
+<p><a href="../ScriptReference/Time-timeScale.html"><code>Time.timeScale</code></a> 表示时间流逝的速率。您可以读取此值，或将其设置为控制时间流逝的速度，从而创建慢动作效果。</p>
+
+<p>有关时间相关属性的完整列表，请参阅<a href="../ScriptReference/Time.html">时间脚本参考页面</a>。</p>
+
+<h2>Frame rate management</h2>
+
+<p>The <a href="../ScriptReference/MonoBehaviour.Update.html">Update</a> function allows you to monitor inputs and other events regularly from a script and take appropriate action. For example, you might move a character when the “forward” key is pressed. An important thing to remember when handling time-based actions like this is that the game’s frame rate is not constant and neither is the length of time between Update function calls.</p>
+
+<p>举例来说，假设在一项任务中需要逐步向前移动某个对象，一次一帧。起初看起来好像可以在每帧将对象移动一个固定距离：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public float distancePerFrame;
+    
+    void Update() {
+        transform.Translate(0, 0, distancePerFrame); // 这不正确
+    }
+}
+</code></pre>
+
+<p>但是，如果帧时间不是恒定的，那么对象看起来会以不规则的速度移动。如果帧时间为 10 毫秒，那么对象将以 <em>distancePerFrame</em> 的距离每秒前进一百次。但如果帧时间增加到 25 毫秒（比如由于 CPU 负载的原因），那么对象每秒只会前进四十次，因此移动的总距离更短。解决方案是通过可从 <a href="../ScriptReference/Time-deltaTime.html">Time.deltaTime</a> 属性读取的帧时间来缩放移动距离大小：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public float distancePerSecond;
+    
+    void Update() {
+        transform.Translate(0, 0, distancePerSecond * Time.deltaTime);
+    }
+}
+</code></pre>
+
+<p>Note that the movement is now given as <em>distancePerSecond</em> rather than <em>distancePerFrame</em>. As the frame rate changes, the size of the movement step will change accordingly and so the object’s speed will be constant.</p>
+
+<p>Depending on your target platform, use either <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a> or <a href="../ScriptReference/QualitySettings-vSyncCount.html">QualitySettings.vSyncCount</a> to set the frame rate of your application. For more information, see the <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate API documentation</a>.</p>
+
+<h2>固定时间步长 (fixedDeltaTime)</h2>
+
+<p>与主帧更新不同，Unity 的物理系统_会_工作到固定的时间步长，这对于模拟的准确性和一致性很重要。在物理更新的开始，Unity 会根据需要执行尽可能多的物理更新以追上当前时间。</p>
+
+<p>如果您的游戏或应用的<em>帧率</em>运行以比固定时间步长值高，这意味着每一帧的持续时间都小于一个固定时间步长，因此 Unity 每帧将执行一次或零次固定物理更新。例如，如果您的固定时间步长值为 0.02，则每秒应该有 50 次固定更新。如果您的游戏或应用随后以大约 60 帧/秒的速度运行，则偶尔会有一帧没有发生固定更新 - 大约十分之一的帧。</p>
+
+<p>如果您的游戏或应用的<em>帧率</em>运行以比固定时间步长值低，这意味着每一帧的持续时间都大于一个固定时间步长。为了解决这个问题，Unity 每帧将执行一次或多次固定物理更新，以便物理模拟“追上”自上一帧以来经过的时间量。例如，如果您的固定时间步长值为 0.01，则每秒应该有 100 次固定更新。如果您的游戏或应用随后以大约 25 帧/秒的速度运行，Unity 每帧将执行大约四次固定更新，以使物理模拟时间与当前帧时间保持同步。</p>
+
+<p>可从 <a href="class-TimeManager.html">Time</a> 窗口中更改固定时间步长的值，并可使用 <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> 属性从脚本中读取该值。请注意，较低的时间步长值将产生更频繁的物理更新和更精确的模拟，但代价是更大的 CPU 负载。除非要对物理引擎提出很高的要求，需要非常高的精度，否则可能不需要更改默认的固定时间步长。</p>
+
+<h2>Unity 的时间逻辑</h2>
+
+<p>以下流程图说明了 Unity 用于计算单个帧中时间的逻辑，以及 <a href="../ScriptReference/Time-time.html">time</a>、<a href="../ScriptReference/Time-deltaTime.html">deltaTime</a>、<a href="../ScriptReference/Time-fixedDeltaTime.html">fixedDeltaTime</a> 和 <a href="../ScriptReference/Time-maximumDeltaTime.html">maximumDeltaTime</a> 属性如何相互关联。</p>
+
+<figure>
+<img src="../uploads/Main/time-flowchart.png" alt="">
+</figure>
+
+<p><a name="MaximumAllowedTimestep"></a></p>
+
+<h2>Maximum Allowed Timestep (maximumDeltaTime)</h2>
+
+<p>当发生非常慢的帧时，<strong>Maximum Allowed Timestep</strong>（在 <a href="class-TimeManager.html">Time</a> 窗口中）会限制下一帧中的 deltaTime 值，以避免 deltaTime 值过大而导致的不良副作用。该值也可以通过 <a href="../ScriptReference/Time-maximumDeltaTime.html">Time.maximumDeltaTime</a> 编写脚本进行访问。</p>
+
+<p>例如，一个以 60Hz 频率运行、maximumDeltaTime 值为 0.333 的应用程序遇到一个非常慢的帧（2 秒）会表现出类似于下表中所示的行为：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Frame</th>
+	<th style="text-align:left;">unscaledTime</th>
+	<th style="text-align:left;">time</th>
+	<th style="text-align:left;">deltaTime</th>
+	<th style="text-align:left;">smoothDeltaTime</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;">0.000</td>
+	<td style="text-align:left;">3.000</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">0.014</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">3.015</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">0.014</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3</td>
+	<td style="text-align:left;">0.028</td>
+	<td style="text-align:left;">3.028</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">0.014</td>
+</tr>
+<tr>
+	<td style="text-align:left;">4 (<strong>a</strong>)</td>
+	<td style="text-align:left;">0.042</td>
+	<td style="text-align:left;">3.043</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">0.014</td>
+</tr>
+<tr>
+	<td style="text-align:left;">5</td>
+	<td style="text-align:left;">2.062 (<strong>b</strong>)</td>
+	<td style="text-align:left;">3.376 (<strong>c</strong>)</td>
+	<td style="text-align:left;">0.333 (<strong>d</strong>)</td>
+	<td style="text-align:left;">0.078</td>
+</tr>
+<tr>
+	<td style="text-align:left;">6</td>
+	<td style="text-align:left;">2.082</td>
+	<td style="text-align:left;">3.396</td>
+	<td style="text-align:left;">0.020</td>
+	<td style="text-align:left;">0.066</td>
+</tr>
+<tr>
+	<td style="text-align:left;">7</td>
+	<td style="text-align:left;">2.096</td>
+	<td style="text-align:left;">3.410</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">0.056</td>
+</tr>
+<tr>
+	<td style="text-align:left;">8</td>
+	<td style="text-align:left;">2.110</td>
+	<td style="text-align:left;">3.424</td>
+	<td style="text-align:left;">0.014</td>
+	<td style="text-align:left;">0.048</td>
+</tr>
+</tbody>
+</table>
+
+<p>上面的数据说明了最大允许时间步长值 (<a href="../ScriptReference/Time-maximumDeltaTime.html">maximumDeltaTime</a>) 的影响。它显示 8 个帧，编号为 1 到 8。在此示例中的第四帧 (<strong>a</strong>) 期间，有一个减速，导致该帧需要两秒才能完成，而不是像其他帧那样大约需要 25 毫秒。其效果体现在下一帧的数值上。在 unscaledTime 值 (<strong>b</strong>) 处可以看到大约增加了 2 秒，但是 Time.time 值仅增加 0.333 (<strong>c</strong>)，因为该值是本示例运行时的最大允许时间步长。此帧的 deltaTime 值也被限制在最大允许时间步长 (<strong>d</strong>)。</p>
+
+<p>最大允许时间步长值也会影响物理计时。<strong>固定时间步长</strong>使物理模拟能够实时保持准确，但是在游戏大量使用物理系统并且游戏帧率也变低的情况下（例如，由于游戏中存在大量运动的对象），可能会导致问题。必须在常规物理更新之间“挤压”主帧更新处理；如果要进行大量处理，则可能需要在单个帧期间进行多个物理更新，以使物理模拟追上当前时间。由于帧时间、对象位置和其他属性在帧开始时被冻结，因此图形可能与更频繁更新的物理系统不同步。</p>
+
+<p>有限 CPU 处理能力意味着物理系统的处理能力也是有限的，但 Unity 可以选择让您有效地减慢物理时间，让帧处理能够在落后时赶上来。最大允许时间步长可限制 Unity 在指定的帧更新期间处理物理系统和 FixedUpdate 调用所花费的时间。</p>
+
+<p>如果帧更新花费的时间超过 <strong>Maximum Allowed Timestep</strong> 设置，则物理引擎将“让时间停止”并让帧处理赶上。一旦帧更新完成，物理引擎将恢复，就好像让时间停止后没有流逝一样。这种情况下的结果是刚体不会像正常情况下那样实时完美移动，而会稍微减慢。然而，物理“时钟”仍将跟踪它们，就像它们正常移动一样。物理时间的减慢通常是不明显的，并且通常是针对游戏性能的合理折衷。</p>
+
+<h2>时间尺度</h2>
+
+<p>对于特殊效果，例如“子弹时间”，有时减慢游戏时间的流逝会很有用，能够使动画和脚本响应以较低的速率发生。此外，有时可能希望完全冻结游戏时间，就像游戏暂停时一样。Unity 有一个 <em>Time Scale</em> 属性可以控制游戏时间相对于实时时间的进展速度。如果该标度设置为 1.0，则游戏时间与实时时间匹配。值为 2.0 会使 Unity 中的时间流逝速度加倍（即，动作将加速），而值为 0.5 则会将游戏速度减半。值为零将使时间完全“停止”。请注意，时间标度实际上并不会降低执行速度，而只是更改了通过 <a href="../ScriptReference/Time-deltaTime.html">Time.deltaTime</a> 和 <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> 报告给 Update 和 FixedUpdate 函数的时间步长。当游戏时间减慢时，调用 Update 函数的频率可能高于平常，但每帧报告的 <em>deltaTime</em> 步长将会缩短。其他脚本函数不受时间标度的影响，因此您可以在游戏暂停时显示具有正常交互的 GUI。</p>
+
+<p><a href="class-TimeManager.html">Time</a> 窗口有一个属性可用于全局设置时间标度，但使用 <a href="../ScriptReference/Time-timeScale.html">Time.timeScale</a> 属性从脚本设置该值通常更有用：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void Pause() {
+        Time.timeScale = 0;
+    }
+    
+    void Resume() {
+        Time.timeScale = 1;
+    }
+}
+</code></pre>
+
+<h2>Capture Framerate</h2>
+
+<p>A very special case of time management is where you want to record gameplay as a video. Since the task of saving screen images takes considerable time, the usual frame rate of the game will be drastically reduced if you attempt to do this during normal gameplay. This will result in a video that doesn’t reflect the true performance of the game.</p>
+
+<p>Fortunately, Unity provides a <a href="../ScriptReference/Time-captureFramerate.html">Capture Framerate</a> property that lets you get around this problem. When the property’s value is set to anything other than zero, game time will be slowed and the frame updates will be issued at precise regular intervals. The interval between frames is equal to 1 / Time.captureFramerate, so if the value is set to 5.0 then updates occur every fifth of a second. With the demands on frame rate effectively reduced, you have time in the Update function to save screenshots or take other actions:</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    // Capture frames as a screenshot sequence. Images are
+    // stored as PNG files in a folder - these can be combined into
+    // a movie using image utility software (eg, QuickTime Pro).
+    // The folder to contain our screenshots.
+    // If the folder exists we will append numbers to create an empty folder.
+    string folder = "ScreenshotFolder";
+    int frameRate = 25;
+        
+    void Start () {
+        // Set the playback frame rate (real time will not relate to game time after this).
+        Time.captureFramerate = frameRate;
+        
+        // Create the folder
+        System.IO.Directory.CreateDirectory(folder);
+    }
+    
+    void Update () {
+        // Append filename to folder name (format is '0005 shot.png"')
+        string name = string.Format("{0}/{1:D04} shot.png", folder, Time.frameCount );
+        
+        // Capture the screenshot to the specified file.
+        Application.CaptureScreenshot(name);
+    }
+}
+</code></pre>
+
+<p>尽管使用这种技术录制的视频通常看起来非常好，但是当速度减慢时，游戏很难运行。您可能需要尝试使用 Time.captureFramerate 的值来确保充足的录制时间，但不会过度复杂化测试播放器的任务。</p>
+<!-- area:core -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-ScriptableObject.html"></a></span><div class="tip">ScriptableObject</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Mathf.html"></a></span><div class="tip">重要的类 - Mathf</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2021 Unity Technologies. Publication 2021.2</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

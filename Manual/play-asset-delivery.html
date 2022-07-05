@@ -1,0 +1,317 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '///gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https:///css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Play 资源交付 - Unity 手册">
+<title>Play 资源交付 - Unity 手册</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="description" content="Play 资源交付 (PAD) 是 Google Play 应用商店的一项功能，可用于交付大于 150MB 的应用程序。PAD 使用资源包而不是 APK 扩展文件 (OBB) 来存储附加资源（例如纹理、声音和网格）。Google 在 Google Play 上托管和提供资源包，这意味着您无需创建内容分发网络来向用户发送应用程序资源。有关 PAD 的更多信息，请参阅 Android 的 Play 资源交付 (Play Asset Delivery)。">
+<meta property="og:description" content="Play 资源交付 (PAD) 是 Google Play 应用商店的一项功能，可用于交付大于 150MB 的应用程序。PAD 使用资源包而不是 APK 扩展文件 (OBB) 来存储附加资源（例如纹理、声音和网格）。Google 在 Google Play 上托管和提供资源包，这意味着您无需创建内容分发网络来向用户发送应用程序资源。有关 PAD 的更多信息，请参阅 Android 的 Play 资源交付 (Play Asset Delivery)。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'play-asset-delivery';
+      if(!page) page = 'index';
+      var version = '2021.2';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2021.2/Manual/play-asset-delivery.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2021.2/Manual/play-asset-delivery.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2021.2/Manual/play-asset-delivery.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2021.2/Manual/play-asset-delivery.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2021.2/Manual/play-asset-delivery.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2021.2/Manual/play-asset-delivery.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2021.2/Manual/play-asset-delivery.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2021.2/Documentation/Manual/play-asset-delivery.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="///ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/play-asset-delivery.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/play-asset-delivery.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/play-asset-delivery.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/play-asset-delivery.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/play-asset-delivery.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/play-asset-delivery.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/play-asset-delivery.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/play-asset-delivery.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/play-asset-delivery.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/play-asset-delivery.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/play-asset-delivery.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/play-asset-delivery.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/play-asset-delivery.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/play-asset-delivery.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/play-asset-delivery.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/play-asset-delivery.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/play-asset-delivery.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/play-asset-delivery.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/play-asset-delivery.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/play-asset-delivery.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.2/Documentation/Manual/play-asset-delivery.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.2/Manual/play-asset-delivery.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.2/Manual/play-asset-delivery.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.2/Manual/play-asset-delivery.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.2/Manual/play-asset-delivery.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.2/Manual/play-asset-delivery.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/play-asset-delivery.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/play-asset-delivery.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/play-asset-delivery.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/play-asset-delivery.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/play-asset-delivery.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/play-asset-delivery.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/play-asset-delivery.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/play-asset-delivery.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/play-asset-delivery.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/play-asset-delivery.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/play-asset-delivery.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/play-asset-delivery.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/play-asset-delivery.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/play-asset-delivery.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/play-asset-delivery.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/play-asset-delivery.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/play-asset-delivery.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/play-asset-delivery.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/play-asset-delivery.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/play-asset-delivery.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.2</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-developing.html">Developing for Android</a></li>
+<li>Play 资源交付</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-OBBsupport.html"></a></span><div class="tip">对 APK 扩展文件 (OBB) 的支持</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-graphics.html"></a></span><div class="tip">Graphics for Android</div>
+</div>
+</div></div>
+<h1>Play 资源交付</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Play 资源交付 (PAD) 是 Google Play 应用商店的一项功能，可用于交付大于 150MB 的应用程序。PAD 使用资源包而不是 <a href="android-OBBsupport.html">APK 扩展文件 (OBB)</a> 来存储附加资源（例如纹理、声音和网格）。Google 在 Google Play 上托管和提供资源包，这意味着您无需创建内容分发网络来向用户发送应用程序资源。有关 PAD 的更多信息，请参阅 Android 的 <a href="https://developer.android.com/guide/playcore/asset-delivery">Play 资源交付 (Play Asset Delivery)</a>。</p>
+
+<p><strong>重要</strong>：PAD 仅适用于 Google Play 应用商店。如果您有一个大型的应用程序，并希望支持其他数字分发服务，请使用 <a href="android-OBBsupport.html">APK 扩展文件 (OBB)</a>。</p>
+
+<h3>使用 Play 资源交付</h3>
+
+<p>要使用 Play 资源交付，您需要设置您的项目以构建 <a href="https://developer.android.com/guide/app-bundle">Android 应用包 (Android App Bundle)</a> 并拆分应用程序二进制文件。</p>
+
+<p>要配置 Unity 以构建 Android 应用包，请执行以下操作：</p>
+
+<p>1.打开 Build Settings（菜单：<strong>File</strong> &gt; <strong>Build Settings</strong>）。
+2.在 <strong>Platform</strong> 中，选择 <strong>Android</strong>。
+3.如果启用了 <strong>Export Project</strong>，则启用 <strong>Export for App Bundle</strong>。否则，启用 <strong>Build App Bundle (Google Play)</strong>。</p>
+
+<p>要配置 Unity 以拆分应用程序二进制文件：</p>
+
+<p>1.打开 Player Settings（菜单：<strong>Edit</strong> &gt; <strong>Project Settings</strong>，然后选择 <strong>Player</strong>）。
+2.选择 Android settings 选项卡并打开 <strong>Publishing Settings</strong> 部分。
+3.启用 <strong>Split Application Binary</strong>。</p>
+
+<p>现在，当您构建您的应用程序时，Unity 会生成一个 Android 应用包，其中包含您的应用程序拆分为<a href="https://developer.android.com/guide/app-bundle/configure-base">基础模块 (base module)</a> 和资源包。</p>
+
+<ul>
+<li>基础模块：包含可执行文件（Java 和本机文件）、插件、脚本以及第一个场景的资源。第一个场景的<a href="../ScriptReference/SceneManagement.Scene-buildIndex.html">构建索引 (build index)</a> 为 0。</li>
+<li>资源包：包含其他所有内容，包括所有剩余的场景、资源和流媒体资源。有关 Unity 在构建时生成的资源包的更多信息，请参阅<a href="#generated-asset-packs">生成的资源包</a>。</li>
+</ul>
+
+<p>除了 Unity 自动生成的资源包，您还可以创建自己的自定义资源包。当您需要控制资源包所含的内容时，这很有用。Unity 将您的自定义资源包添加到最终的 Android 应用包中。有关自定义资源包以及如何设置它们的更多信息，请参阅<a href="#custom-asset-packs">自定义资源包</a>。</p>
+
+<p><a name="generated-asset-packs"></a></p>
+
+<h3>生成的资源包</h3>
+
+<p>资源包具有<a href="https://developer.android.com/guide/playcore/asset-delivery#download-size-limits">下载大小限制</a>。为了解决这个问题，Unity 会根据附加资源的大小更改其生成资源包的方式：</p>
+
+<ul>
+<li>如果额外的资源占用的存储空间少于 1GB，Unity 会将所有内容打包到一个带有 <code>install-time</code> <a href="https://developer.android.com/guide/playcore/asset-delivery#delivery-modes">交付模式 (delivery mode)</a> 的资源包中。如果您不创建任何<a href="#custom-asset-packs">自定义资源包</a>，这意味着设备会在应用程序安装过程中下载资源包，并且当用户首次启动应用程序时，所有资源都可用。</li>
+<li>如果额外的资源占用的存储空间多于 1GB，Unity 会将所有<a href="StreamingAssets.html">流媒体资源</a>打包到一个资源包中，并将所有其他资源打包到另一个资源包中。Unity 为较大的资源包指定 <code>install-time</code> 交付模式，为较小的资源包指定 <code>fast-follow</code> 交付模式。</li>
+</ul>
+
+<p><strong>注意</strong>： 如果这些资源包中的任何一个大于 Google Play 应用商店允许的上传限制，Unity 会显示警告但不会使构建失败。此外，Unity 会单独检查资源包的大小，并且不会对自定义资源包执行大小验证。这意味着，如果自定义资源包和 Unity 生成的资源包的组合对于 Google Play 应用商店来说太大，Unity 不会显示警告或错误。</p>
+
+<p>对于 Unity 自动生成的资源包，Unity 不支持更改<a href="https://developer.android.com/guide/playcore/asset-delivery#delivery-modes">交付模式</a>。如果您想更改资源包的交付模式，请使用您的资源创建自定义资源包。</p>
+
+<p><a name="managing-asset-packs-at-runtime"></a></p>
+
+<h3>在运行时管理资源包</h3>
+
+<p>Unity 提供了在运行时管理资源包的 <a href="../ScriptReference/Android.AndroidAssetPacks.html">API</a>。它们使用 Google 的 PlayCore API，这意味着它们具有与 PlayCore 相同的限制，并且无法管理 <code>install-time</code> 资源包。使用 PlayCore API 还意味着您的应用程序需要 <a href="https://developer.android.com/guide/playcore">PlayCore</a> 插件。如果您的项目含有资源包，无论是自定义资源包还是 Unity 生成的资源包，Unity 都会自动将 PlayCore 依赖项添加到应用程序的清单中。</p>
+
+<p>您下载资源包并访问其资源的方式取决于资源包的交付方式。有三种资源包交付模式：</p>
+
+<p><em><code>install-time</code>：当设备安装应用程序时，Google Play 会自动下载 <code>install-time</code> 资源包。Google Play 将这些资源包视为基础应用程序的一部分，终端用户必须卸载整个应用程序才能卸载这些资源包。PlayCore API 不处理 <code>install-time</code> 资源包，这意味着您无法对 <code>install-time</code> 资源包检查状态、请求下载或删除。除了 Unity 生成的 <code>install-time</code> 资源包中的流媒体资源，您也不能直接访问这些资源包内的资源。要访问流媒体资源，请使用 <a href="../ScriptReference/Application-streamingAssetsPath.html">Application-streamingAssetsPath</a> 获取流媒体资源位置的路径，然后使用 <a href="../ScriptReference/Networking.UnityWebRequest.html">UnityWebRequest</a> 访问该路径中的资源。如果您创建自定义资源包，则无法使用标准文件 API 访问其中的资源。而应使用 <a href="https://developer.android.com/guide/playcore/asset-delivery/integrate-java#install-time-delivery">Android 的 AssetManager APIs</a>。
+</em> <code>fast-follow</code>：Google Play 在安装应用程序后自动开始下载 <code>fast-follow</code> 资源包。但是，应用程序首次启动时可能并非所有 <code>fast-follow</code> 资源包都可用。要检查状态并下载 <code>fast-follow</code> 资源包，请参见下文。
+* <code>on-demand</code>：Google Play 不会自动下载 <code>on-demand</code> 资源包。您必须手动开始下载。有关如何执行此操作的信息，请参见下文。</p>
+
+<p>有关交付模式的更多信息，请参阅<a href="https://developer.android.com/guide/playcore/asset-delivery#delivery-modes">交付模式</a>。</p>
+
+<p>如果您的应用程序使用 <code>fast-follow</code> 或 <code>on-demand</code> 资源包，则设备必须先下载这些资源包，然后应用程序才能访问其中的资源。要检查资源包的状态并下载（如果它们不在设备上），您必须首先知道每个资源包的名称。要获取 Unity 生成的资源包的名称，请调用 <a href="../ScriptReference/Android.AndroidAssetPacks.GetCoreUnityAssetPackNames.html">AndroidAssetPacks.GetCoreUnityAssetPackNames</a>。由于没有运行时 API 来获取<a href="#custom-asset-packs">自定义资源包</a>，您必须自己对其进行跟踪。自定义资源包的名称在构建时设置；它是目录的名称。</p>
+
+<p>获得资源包的名称后，要检查每个资源包的状态，请传入资源包名称调用 <a href="../ScriptReference/Android.AndroidAssetPacks.GetAssetPackStateAsync.html">AndroidAssetPacks.GetAssetPackStateAsync</a>。这将返回您查询的资源包的状态，您可以根据结果确定是否需要下载资源包。如果您想快速查询每个 Unity 生成的资源包的状态，您可以使用 <a href="../ScriptReference/Android.AndroidAssetPacks-coreUnityAssetPacksDownloaded.html">AndroidAssetPacks.coreUnityAssetPacksDownloaded</a>。这很有用，因为在加载第一个场景以外的任何场景或尝试访问 Unity 处理的其他资源之前，您必须确保每个 Unity 生成的资源包都可用。</p>
+
+<p>对于您需要下载的每个资源包，传入资源包名称调用 <a href="../ScriptReference/Android.AndroidAssetPacks.DownloadAssetPackAsync.html">AndroidAssetPacks.DownloadAssetPackAsync</a>。在下载资源包时，请监控下载状态，因为下载可能会暂停或失败。有两种方式可以做到这一点：</p>
+
+<ul>
+<li>定期检查 AndroidAssetPacks.DownloadAssetPackAsync 返回的 <a href="../ScriptReference/Android.DownloadAssetPackAsyncOperation.html">DownloadAssetPackAsyncOperation</a> 实例。</li>
+<li>使用以回调作为第二个参数的 <a href="../ScriptReference/Android.AndroidAssetPacks.DownloadAssetPackAsync.html">AndroidAssetPacks.DownloadAssetPackAsync</a> 版本。传入的回调必须以 <a href="../ScriptReference/Android.AndroidAssetPackInfo.html">AndroidAssetPackInfo</a> 作为参数，用于确定下载的状态。</li>
+</ul>
+
+<p><a name="custom-asset-packs"></a></p>
+
+<h2>自定义资源包</h2>
+
+<p>如果要控制特定资源包中包含哪些非代码资源，可以创建自定义资源包。与 Unity 生成的资源包不同，您可以为自定义资源包设置交付模式。如果您创建自定义资源包，请注意 Google Play 应用商店对资源包的大小和数量限制。有关限制的信息，请参阅<a href="https://developer.android.com/guide/playcore/asset-delivery#download-size-limits">下载大小限制</a>。</p>
+
+<p>要创建自定义资源包，请创建一个名称以 <strong>.androidpack</strong> 结尾的目录。您可以将此目录放在项目的 Assets 目录或任何子目录中的任何位置。例如，要创建一个名为 <strong>MyAssets1</strong> 的自定义资源包：</p>
+
+<p>1.转到您要在其中创建资源包的目录。这可以直接在 <strong>Assets</strong> 或类似 <strong>Assets/CustomAssetPacks</strong> 的子目录中。
+2.创建一个新目录并将其命名为 <strong>MyAssets1.androidpack</strong>。要将任何资源添加到资源包，请将它们放在此文件夹中。<strong>注意</strong>：Unity 在构建中不包含空的资源包。此外，资源包名称必须以字母开头，并由英文字母数字字符或下划线组成。
+3.默认情况下，交付模式为 <code>on-demand</code>，这意味着如果您不更改交付模式，需要在运行时手动下载资源包。有关如何执行此操作的信息，请参阅<a href="#managing-asset-packs-at-runtime">在运行时管理资源包</a>。
+4.要使用不同的交付模式，请在自定义资源包目录中创建一个名为 <strong>build.gradle</strong> 的文件。将以下内容粘贴到文件中：</p>
+
+<pre><code>apply plugin: 'com.android.asset-pack'
+assetPack {
+    packName = "MyAssets1"
+    dynamicDelivery {
+        deliveryType = "fast-follow"
+    }
+}
+</code></pre>
+
+<p>这将交付模式设置为 <code>fast-follow</code>，这意味着 Google Play 在安装应用程序后会自动下载资源包。有关此文件格式的信息，请参阅<a href="https://developer.android.com/guide/playcore/asset-delivery/integrate-java">集成资源交付 (Integrate asset delivery)</a>。</p>
+
+<p><strong>注意</strong>：您在 <code>build.gradle</code> 文件中指定的 <strong>packName</strong> 应与您设置的不带 <strong>.androidpack</strong> 扩展名的资源包目录名称相匹配。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-OBBsupport.html"></a></span><div class="tip">对 APK 扩展文件 (OBB) 的支持</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-graphics.html"></a></span><div class="tip">Graphics for Android</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2021 Unity Technologies. Publication 2021.2</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

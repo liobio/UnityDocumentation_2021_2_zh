@@ -1,0 +1,368 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '///gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https:///css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Roslyn 分析器和规则集文件 - Unity 手册">
+<title>Roslyn 分析器和规则集文件 - Unity 手册</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="description" content="在 Unity 项目中使用 Roslyn 分析器规则集文件，可检查代码的样式、质量和其他问题。">
+<meta property="og:description" content="在 Unity 项目中使用 Roslyn 分析器规则集文件，可检查代码的样式、质量和其他问题。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'roslyn-analyzers';
+      if(!page) page = 'index';
+      var version = '2021.2';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2021.2/Manual/roslyn-analyzers.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2021.2/Manual/roslyn-analyzers.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2021.2/Manual/roslyn-analyzers.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2021.2/Manual/roslyn-analyzers.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2021.2/Manual/roslyn-analyzers.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2021.2/Manual/roslyn-analyzers.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2021.2/Manual/roslyn-analyzers.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2021.2/Documentation/Manual/roslyn-analyzers.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="///ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/roslyn-analyzers.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/roslyn-analyzers.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/roslyn-analyzers.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/roslyn-analyzers.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/roslyn-analyzers.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/roslyn-analyzers.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/roslyn-analyzers.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/roslyn-analyzers.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/roslyn-analyzers.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/roslyn-analyzers.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/roslyn-analyzers.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/roslyn-analyzers.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/roslyn-analyzers.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/roslyn-analyzers.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/roslyn-analyzers.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/roslyn-analyzers.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/roslyn-analyzers.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/roslyn-analyzers.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/roslyn-analyzers.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/roslyn-analyzers.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.2/Documentation/Manual/roslyn-analyzers.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.2/Manual/roslyn-analyzers.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.2/Manual/roslyn-analyzers.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.2/Manual/roslyn-analyzers.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.2/Manual/roslyn-analyzers.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.2/Manual/roslyn-analyzers.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/roslyn-analyzers.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/roslyn-analyzers.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/roslyn-analyzers.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/roslyn-analyzers.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/roslyn-analyzers.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/roslyn-analyzers.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/roslyn-analyzers.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/roslyn-analyzers.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/roslyn-analyzers.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/roslyn-analyzers.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/roslyn-analyzers.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/roslyn-analyzers.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/roslyn-analyzers.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/roslyn-analyzers.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/roslyn-analyzers.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/roslyn-analyzers.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/roslyn-analyzers.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/roslyn-analyzers.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/roslyn-analyzers.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/roslyn-analyzers.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.2</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingSettingUp.html">设置脚本编写环境</a></li>
+<li>Roslyn 分析器和规则集文件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="testing-editortestsrunner.html"></a></span><div class="tip">单元测试。</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptingConcepts.html"></a></span><div class="tip">脚本概念</div>
+</div>
+</div></div>
+<h1>Roslyn 分析器和规则集文件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在 Unity 项目中使用 Roslyn 分析器规则集文件，可检查代码的样式、质量和其他问题。</p>
+
+<p>您可以使用现有分析器库来检查代码，也可以编写自己的分析器来提升组织内的最佳做法或惯例。本页介绍了如何在空的 Unity 项目中使用 Roslyn 分析器。</p>
+
+<h2>使用现有的 Roslyn 分析器库</h2>
+
+<p>要使用现有的 Roslyn 分析器库，请在您的项目中<a href="https://www.nuget.org/packages/ErrorProne.NET.CoreAnalyzers/">安装 NuGet 的 ErrorProne.NET.CoreAnalyzers 库</a>。然后打开 <code>.csproj</code> 文件。该项目包含三个 .dll 文件作为分析器：</p>
+
+<pre><code>  &lt;ItemGroup&gt;
+      &lt;Analyzer Include="packages\ErrorProne.NET.CoreAnalyzers.0.1.2\analyzers\dotnet\cs\ErrorProne.NET.Core.dll" /&gt;
+      &lt;Analyzer Include="packages\ErrorProne.NET.CoreAnalyzers.0.1.2\analyzers\dotnet\cs\ErrorProne.Net.CoreAnalyzers.dll" /&gt;
+      &lt;Analyzer Include="packages\ErrorProne.NET.CoreAnalyzers.0.1.2\analyzers\dotnet\cs\RuntimeContracts.dll" /&gt;
+    &lt;/ItemGroup&gt;
+</code></pre>
+
+<p>将三个 .dll 文件移动到 Unity 项目中的 <code>Assets</code> 文件夹（或 <code>Assets</code> 文件夹内的任何文件夹）。在编辑器中选择 .dll 文件。在 <a href="PluginInspector.html">Plugin Inspector</a> 中的 <strong>Select platforms for plugin</strong> 下方, 禁用 <strong>Any Platform</strong>。在 <strong>Include platforms</strong> 下方，禁用 <strong>Editor</strong> 和 <strong>Standalone</strong> 平台。然后，为所有 DLL 指定一个名为“RoslynAnalyzer”的新<a href="Searching.html">资源标签</a>。</p>
+
+<p>为了测试一切是否正常，请在项目的 <code>Assets</code> 文件夹中保存一个名为 <code>RethrowError.cs</code> 的文件，其中包含以下代码。此代码导致 <code>ErrorProne.NET</code> 引发有关不正确异常传播和可疑异常处理的警告：</p>
+
+<pre><code class="language-csharp">using System;
+using UnityEngine;
+
+public class RethrowError : MonoBehaviour
+{
+    void Update()
+    {
+        try
+        {
+            DoSomethingInteresting();
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e.Message);
+            throw e;
+        }
+    }
+
+    private void DoSomethingInteresting()
+    {
+        throw new System.NotImplementedException();
+    }
+}
+</code></pre>
+
+<p>执行此操作后，您应该会在 Console 窗口中看到以下两个警告：</p>
+
+<pre><code>Assets\RethrowError.cs(14,23): warning EPC12: Suspicious exception handling: only e.Message is observed in exception block.
+Assets\RethrowError.cs(15,19): warning ERP021: Incorrect exception propagation.Use throw; instead.
+</code></pre>
+
+<h2>分析器范围</h2>
+
+<p>如果分析器位于 <code>Assets</code> 文件夹，或者位于一个子文件夹中且其任何父文件夹都不包含<a href="ScriptCompilationAssemblyDefinitionFiles.html">程序集定义文件</a>，分析器将全局应用于您项目的所有程序集。如果分析器位于包含程序集定义的文件夹或此类文件夹的子文件夹中，则分析器仅应用于从该程序集定义生成的程序集以及引用它的任何其他程序集。</p>
+
+<p>这意味着一个<a href="PackagesList.html">包</a>提供的分析器可仅应用于使用该包的代码，例如帮助指导包的用户正确使用该包的 API。</p>
+
+<h2>规则集文件</h2>
+
+<p>要定义如何处理项目中的分析器引发的各种警告和错误的规则，您可以创建规则集文件。有关如何创建自定义规则集的更多信息，请参阅 Microsoft 的 Visual Studio 文档<a href="https://docs.microsoft.com/en-us/visualstudio/code-quality/how-to-create-a-custom-rule-set?view=vs-2019">如何创建自定义规则集</a>。</p>
+
+<p>在 <code>Assets</code> 根文件夹中，放置一个名为 <code>Default.ruleset</code> 的规则集文件。您在 <code>Default.ruleset</code> 中定义的规则应用于所有预定义的程序集（例如 <code>Assembly-CSharp.dll</code>），以及所有使用 <code>.asmdef</code> 文件构建的程序集。</p>
+
+<p>要覆盖用于预定义程序集的 <code>Default.ruleset</code> 中的规则，请在根文件夹中创建一个名为 <code>[PredefinedAssemblyName].ruleset</code> 的 <code>.ruleset</code> 文件。例如，<code>Assembly-CSharp.ruleset</code> 中的规则应用于 <code>Assembly-CSharp.dll</code> 中的代码。根文件夹中只允许使用这些 <code>.ruleset</code> 文件：</p>
+
+<ul>
+<li><code>Default.ruleset</code></li>
+<li><code>Assembly-CSharp.ruleset</code></li>
+<li><code>Assembly-CSharp-firstpass.ruleset</code></li>
+<li><code>Assembly-CSharp-Editor.ruleset</code></li>
+<li><code>Assembly-CSharp-Editor-firstpass.ruleset</code></li>
+</ul>
+
+<h3>工作流程：在 Unity 中测试规则集文件</h3>
+
+<p>要在 Unity 中测试规则集文件，请执行以下步骤：</p>
+
+<h4>步骤 1：设置规则集文件</h4>
+
+<p>1.在项目的 <code>Assets</code> 文件夹中创建一个名为 <code>Subfolder</code> 的子文件夹。
+1.在 <code>Subfolder</code> 内：
+ 1.创建一个新的 <code>.asmdef</code> 文件。
+ 1.保存 <code>RethrowError.cs</code> 的重复副本。
+1.在 <code>Assets</code> 中创建一个 <code>Default.ruleset</code> 文件，包含如下代码：</p>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RuleSet Name="New Rule Set" Description=" " ToolsVersion="10.0"&gt;
+  &lt;Rules AnalyzerId="ErrorProne.NET.CodeAnalyzers" RuleNamespace="ErrorProne.NET.CodeAnalyzers"&gt;
+    &lt;Rule Id="ERP021" Action="Error" /&gt;
+  &lt;Rule Id="EPC12" Action="None" /&gt;
+  &lt;/Rules&gt;
+&lt;/RuleSet&gt;
+</code></pre>
+
+<p><code>Default.ruleset</code> 文件定义了以下规则：</p>
+
+<ul>
+<li>将关于可疑异常处理的警告的 <code>EPC12</code> 禁止。</li>
+<li>将关于错误异常传播的警告的 <code>ERP021</code> 提升为错误。</li>
+</ul>
+
+<h4>第 2 步：重新加载项目</h4>
+
+<p>将规则集文件添加到您的项目后，重新导入程序集中需应用规则的任何脚本。这会强制 Unity 使用新的规则集文件重新编译程序集。重新编译后，您应该在 Console 窗口中看到两条消息：</p>
+
+<pre><code>Assets\Subfolder\RethrowError.cs(15,19): error ERP021: Incorrect exception propagation.Use throw; instead.
+Assets\RethrowError.cs(15,19): error ERP021: Incorrect exception propagation.Use throw; instead.
+</code></pre>
+
+<p>请注意，Unity 将 <code>Default.ruleset</code> 中定义的规则应用到 <code>Assets/RethrowError.cs</code> 和 <code>Assets/Subfolder/RethrowError.cs</code>。</p>
+
+<h4>第 3 步：添加自定义规则集</h4>
+
+<p>在 <code>Assets/Subfolder</code>，创建一个 <code>.ruleset</code> 文件，并根据您的喜好命名（本例中为 <code>Hello.ruleset</code>）：</p>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RuleSet Name="New Rule Set" Description=" " ToolsVersion="10.0"&gt;
+  &lt;Rules AnalyzerId="ErrorProne.NET.CodeAnalyzers" RuleNamespace="ErrorProne.NET.CodeAnalyzers"&gt;
+    &lt;Rule Id="ERP021" Action="Info" /&gt;
+    &lt;Rule Id="EPC12" Action="Info" /&gt;
+  &lt;/Rules&gt;
+&lt;/RuleSet&gt;
+</code></pre>
+
+<p>这个新的 <code>Hello.ruleset</code> 文件告诉 Unity 将 <code>EPC12</code> 和 <code>ERP021</code> 打印到控制台，而不将它们视为警告或错误。</p>
+
+<p>Unity 再次编译项目后，您会在 Console 窗口中看到以下消息：</p>
+
+<pre><code>Assets\Subfolder\RethrowError.cs(14,23): info EPC12: Suspicious exception handling: only e.Message is observed in exception block.
+Assets\Subfolder\RethrowError.cs(15,19): info ERP021: Incorrect exception propagation.Use throw; instead.
+Assets\RethrowError.cs(15,19): error ERP021: Incorrect exception propagation.Use throw; instead.
+</code></pre>
+
+<p><code>Default.ruleset</code> 中的规则仍然应用于 <code>Assets\RethrowError.cs</code>，但它们不再应用于 <code>Assets\Subfolder\RethrowError.cs</code>，因为 <code>Hello.ruleset</code> 中的规则将其覆盖。</p>
+
+<p>有关所有允许的规则集操作文件的更多信息，请参阅 Visual Studio 文档<a href="https://docs.microsoft.com/en-us/visualstudio/code-quality/working-in-the-code-analysis-rule-set-editor?view=vs-2019">使用代码分析规则集编辑器</a>。</p>
+
+<h2>更多分析器</h2>
+
+<p>以下是指向其他流行 Roslyn 分析器库的 Github 存储库的链接：</p>
+
+<ul>
+<li><a href="https://github.com/Cybermaxs/awesome-analyzers">awesome-analyzers</a></li>
+<li><a href="https://github.com/dotnet/roslyn-analyzers">dotnet/roslyn-analyzers</a></li>
+</ul>
+
+<p>*<span class="page-history">Roslyn 分析器兼容性添加于 <a href="https://docs.unity3d.com/2020.2/Documentation/Manual/30_search.html?q=newin20202">2020.2</a><span class="search-words"> NewIn20202</span></span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="testing-editortestsrunner.html"></a></span><div class="tip">单元测试。</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptingConcepts.html"></a></span><div class="tip">脚本概念</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2021 Unity Technologies. Publication 2021.2</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

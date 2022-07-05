@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '///gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https:///css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Android 环境设置 - Unity 手册">
+<title>Android 环境设置 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2021.2/uploads/Main/PreferenceesExternalToolsAndroid.png">
+<meta name="description" content="要为 Android 构建和运行应用程序，必须安装 Unity Android Build Support 平台模块。还需要安装 Android 软件开发工具包（SDK）和原生开发工具包（NDK）才能在 Android 设备上构建和运行代码。默认情况下，Unity 会安装基于 OpenJDK 的 Java 开发工具包。">
+<meta property="og:description" content="要为 Android 构建和运行应用程序，必须安装 Unity Android Build Support 平台模块。还需要安装 Android 软件开发工具包（SDK）和原生开发工具包（NDK）才能在 Android 设备上构建和运行代码。默认情况下，Unity 会安装基于 OpenJDK 的 Java 开发工具包。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'android-sdksetup';
+      if(!page) page = 'index';
+      var version = '2021.2';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2021.2/Manual/android-sdksetup.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2021.2/Manual/android-sdksetup.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2021.2/Manual/android-sdksetup.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2021.2/Manual/android-sdksetup.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2021.2/Manual/android-sdksetup.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2021.2/Manual/android-sdksetup.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2021.2/Manual/android-sdksetup.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2021.2/Documentation/Manual/android-sdksetup.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="///ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/android-sdksetup.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/android-sdksetup.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/android-sdksetup.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/android-sdksetup.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/android-sdksetup.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/android-sdksetup.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/android-sdksetup.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/android-sdksetup.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/android-sdksetup.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/android-sdksetup.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/android-sdksetup.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/android-sdksetup.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/android-sdksetup.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/android-sdksetup.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/android-sdksetup.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/android-sdksetup.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/android-sdksetup.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/android-sdksetup.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/android-sdksetup.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/android-sdksetup.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.2/Documentation/Manual/android-sdksetup.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.2/Manual/android-sdksetup.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.2/Manual/android-sdksetup.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.2/Manual/android-sdksetup.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.2/Manual/android-sdksetup.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.2/Manual/android-sdksetup.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/android-sdksetup.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/android-sdksetup.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/android-sdksetup.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/android-sdksetup.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/android-sdksetup.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/android-sdksetup.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/android-sdksetup.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/android-sdksetup.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/android-sdksetup.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/android-sdksetup.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/android-sdksetup.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/android-sdksetup.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/android-sdksetup.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/android-sdksetup.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/android-sdksetup.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/android-sdksetup.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/android-sdksetup.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/android-sdksetup.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/android-sdksetup.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/android-sdksetup.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.2</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-getting-started.html">Getting started with Android</a></li>
+<li>Android 环境设置</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-getting-started.html"></a></span><div class="tip">Getting started with Android</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Android Player 设置</div>
+</div>
+</div></div>
+<h1>Android 环境设置</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要为 Android 构建和运行应用程序，必须安装 Unity <strong>Android Build Support</strong> 平台模块。还需要安装 Android 软件开发工具包（SDK）和原生开发工具包（NDK）才能在 Android 设备上构建和运行代码。默认情况下，Unity 会安装基于 <a href="http://openjdk.java.net/">OpenJDK</a> 的 Java 开发工具包。</p>
+
+<p><strong>Note</strong>: Unity supports Android 5.1 “Lollipop” (API 22) and above. See <a href="../ScriptReference/AndroidSdkVersions.html">AndroidSdkVersions</a> for details.</p>
+
+<h2>Install Android Build Support and the Android SDK &amp; NDK tools</h2>
+
+<p>Use the <a href="GettingStartedUnityHub.html">Unity Hub</a> to install Android Build Support and the required dependencies: <strong>Android SDK &amp; NDK tools</strong>, and <strong>OpenJDK</strong>.</p>
+
+<p>You can install Android Build Support, the Android SDK &amp; NDK tools, and OpenJDK when you install the Unity Editor, or add them at a later time.</p>
+
+<p>For information on how to add the Android modules:</p>
+
+<ul>
+<li>在安装时，请参阅<a href="GettingStartedInstallingHub.html">安装 Unity</a>。</li>
+<li>要添加到现有安装实例中，请参阅<a href="GettingStartedAddingEditorComponents.html">向 Editor 添加模块</a>。</li>
+</ul>
+
+<h2>Enable USB debugging on your device</h2>
+
+<p>To enable USB debugging, you must enable Developer options on your device. To do this, see Android’s <a href="https://developer.android.com/studio/debug/dev-options">Configure developer options</a> documentation.</p>
+
+<p>Use a USB cable to connect your device to your computer. If you are developing on a Windows computer, you might need to install a device-specific USB driver. See the manufacturer website for your device for additional information.</p>
+
+<p>The setup process differs for Windows and macOS. For more information on connecting your Android device to the SDK, refer to the <a href="https://developer.android.com/training/basics/firstapp/running-app.html#Emulator">Run Your App</a> section of the Android Developer documentation.</p>
+
+<h3>为 Chrome OS 设备进行 ADB 调试</h3>
+
+<p>有关如何为 Chrome OS 设备设置开发环境并启用 ADB 调试的信息，请参阅 Google 文档 <a href="https://developer.android.com/topic/arc/development-environment">Chrome OS 开发者环境 (Chrome OS Developer Environments)</a>。</p>
+
+<h4>连接到您的 Chrome OS 设备</h4>
+
+<p>在部署到设备之前，您需要通过设备的 IP 地址手动连接 ADB。</p>
+
+<p>首先需要 IP 地址。打开 <strong>Settings</strong> 应用并在边栏中选择 <strong>Network</strong>。然后单击激活的网络接口。</p>
+
+<p>如果该接口为无线连接，接下来选择要连接到的 SSID。您将在详细信息中看到 IP 地址。请记下该地址。</p>
+
+<p>如果使用的是有线连接，您的 IP 地址应显示在第一个详细信息页面上。</p>
+
+<p>现在，您可以进行连接了。对于本示例，假定设备的 IP 为 192.168.0.100。在 shell 或 terminal 中运行以下命令</p>
+
+<p><code>adb connect 192.168.0.100</code></p>
+
+<p>If the connection was successful you will see a message such as <code>connected to 192.168.0.65:5555</code>. And <code>adb devices</code> should verify that the device is connected. </p>
+
+<p><code>List of devices attached
+192.168.0.65:5555       device</code></p>
+
+<p>从现在起，您可以像通过 USB 连接一样运行 ADB 命令来定位设备。</p>
+
+<p><strong>注意：</strong> 如果您的设备或主机进入睡眠状态或失去网络连接，您可能需要重新连接。</p>
+
+<h2>自定义 Android SDK &amp; NDK Tools 和 OpenJDK 的安装</h2>
+
+<p>You should use the Unity Hub to install Android SDK &amp; NDK tools, to ensure that you receive the correct versions and configuration. Unity installs Android SDK &amp; NDK Tools and OpenJDK respectively in the <code>SDK</code>, <code>NDK</code> and folders under <code>/Unity/Hub/Editor/[EditorVersion]/Editor/Data/PlaybackEngines/AndroidPlayer/</code>.</p>
+
+<p>If you have multiple versions of Unity with the same required dependencies (check <a href="system-requirements.html">System requirements</a> for the latest) and you want to avoid duplicating the installation of Android SDK &amp; NDK Tools and OpenJDK, you can specify a shared location in the Unity Preferences window. To do this, go to <strong>Preferences &gt; External tools</strong> and enter the directory paths in the <strong>SDK</strong> and <strong>NDK</strong> fields:</p>
+
+<figure>
+<img src="../uploads/Main/PreferenceesExternalToolsAndroid.png" alt="Preferences 窗口中显示了 Android 外部工具设置">
+<figcaption>Preferences 窗口中显示了 Android 外部工具设置</figcaption>
+</figure>
+
+<p><strong>Warning</strong>: Unity doesn’t support versions of the OpenJDK, SDK, or NDK other than the ones it supplies.</p>
+
+<p>要更改 Unity 用于构建 Android 应用程序的 OpenJDK、SDK Tools 或 NDK，请执行以下操作：</p>
+
+<ol>
+<li><p>Open your Unity project.</p></li>
+<li><p>Open the Preferences window (Windows and Linux: <strong>Edit</strong> &gt; <strong>Preferences</strong>; macOS: <strong>Unity</strong> &gt; <strong>Preferences</strong>).</p></li>
+<li><p>In the left navigation column, select <strong>External Tools</strong>.</p></li>
+<li>Change the OpenJDK path:
+
+<ol>
+<li>Disable the <strong>JDK Installed with Unity (recommended)</strong> setting.</li>
+<li>In the <strong>JDK</strong> field, enter the path to the JDK installation folder, or use the <strong>Browse</strong> button to locate it.</li>
+</ol>
+</li>
+<li>Change the Android SDK Tools path:
+
+<ol>
+<li>Disable the <strong>Android SDK Tools Installed with Unity (recommended)</strong> setting.</li>
+<li>In the <strong>SDK</strong> field, enter the path to the SDK installation folder, or use the <strong>Browse</strong> button to locate it.</li>
+</ol>
+
+<p><strong>Note:</strong> Unity works with the most recent version of the Android SDK available at the time of the Unity version release.</p>
+</li>
+<li>Change the Android NDK path:
+1.取消选中 <strong>Android NDK Installed with Unity (recommended)</strong>。
+
+<ol>
+<li>In the <strong>NDK</strong> field, enter the path to the NDK installation folder, or use the <strong>Browse</strong> button to locate it.</li>
+</ol>
+</li>
+</ol>
+
+<p>Each version of Unity requires a specific version of the Android NDK: </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Unity 版本</strong></th>
+	<th style="text-align:left;"><strong>NDK 版本</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">2018.4 LTS</td>
+	<td style="text-align:left;">r16b</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2019.4 LTS</td>
+	<td style="text-align:left;">r19</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2020.3 LTS</td>
+	<td style="text-align:left;">r19</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2021.1</td>
+	<td style="text-align:left;">r21d</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2021.2</td>
+	<td style="text-align:left;">r21d</td>
+</tr>
+</tbody>
+</table>
+
+<p>请参阅<a href="system-requirements.html">系统要求</a>页面以查看完整要求。</p>
+
+<h2>更新 Android SDK Target API</h2>
+
+<p>Unity Hub 安装了 Google Play 所需的最新版本的 Android SDK Target API。</p>
+
+<p>如果您需要使用更新的版本，您可以从 <strong>Player Settings</strong> 窗口的 <strong>Target API Level</strong>字段更改 Target API（菜单：<strong>Edit &gt; Project Settings &gt; Player</strong>，然后选择 <strong>Android</strong> 平台）。您可以在 <strong>Other Settings &gt; Identification</strong> 部分找到 <strong>Target API Level</strong> 选项。</p>
+
+<figure>
+<img src="../uploads/Main/android-sdk-target-api.png" alt="为 Android SDK 选择目标 API">
+<figcaption>为 Android SDK 选择目标 API</figcaption>
+</figure>
+
+<p>选择默认选项以外的选项后，Unity 会提示您更新 Android SDK API。可选择执行以下操作之一：</p>
+
+<ul>
+<li>更新 Android SDK</li>
+<li>继续使用已安装的最高版本的 Android SDK</li>
+</ul>
+
+<p>If you select an older version of the Target API, the Unity Android SDK Updater won’t be able to perform the update and gives an error message.</p>
+
+<p>In this case, to update the Android SDK Target API, you must use the Android sdkmanager from either <a href="https://developer.android.com/studio">Android Studio</a> or the <a href="https://developer.android.com/studio/command-line/sdkmanager">command line tool</a>. Regardless of the method you choose, make sure to select the correct Android SDK folder for Unity in the <strong>Edit &gt; Preferences &gt; External Tools</strong> window.</p>
+
+<p><strong>Important:</strong> On Windows, if you installed the Unity Editor in the default folder (<code>/Program Files/</code>), you must run the sdkmanager with elevated privilege (Run as Administrator) to perform the update.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-getting-started.html"></a></span><div class="tip">Getting started with Android</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Android Player 设置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2021 Unity Technologies. Publication 2021.2</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

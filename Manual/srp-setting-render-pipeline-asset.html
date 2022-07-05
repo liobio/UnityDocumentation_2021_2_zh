@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '///gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https:///css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="切换渲染管线 - Unity 手册">
+<title>切换渲染管线 - Unity 手册</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="description" content="本页面包含有关设置 Unity 当前使用的活动渲染管线的信息。此信息可让您切换到内置渲染管线、通用渲染管线 (URP)、高清渲染管线 (HDRP) 或自定义渲染管线。">
+<meta property="og:description" content="本页面包含有关设置 Unity 当前使用的活动渲染管线的信息。此信息可让您切换到内置渲染管线、通用渲染管线 (URP)、高清渲染管线 (HDRP) 或自定义渲染管线。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'srp-setting-render-pipeline-asset';
+      if(!page) page = 'index';
+      var version = '2021.2';
+      var docs_versions = [{version: '2022.1',version_string: '2022.1',supported: true},{version: '2021.3',version_string: '2021.3',supported: true},{version: '2021.2',version_string: '2021.2',supported: false},{version: '2021.1',version_string: '2021.1',supported: false},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: false},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2021.2/Manual/srp-setting-render-pipeline-asset.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2021.2/Manual/srp-setting-render-pipeline-asset.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2021.2/Manual/srp-setting-render-pipeline-asset.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2021.2/Manual/srp-setting-render-pipeline-asset.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2021.2/Manual/srp-setting-render-pipeline-asset.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2021.2/Manual/srp-setting-render-pipeline-asset.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2021.2/Manual/srp-setting-render-pipeline-asset.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2021.2/Documentation/Manual/srp-setting-render-pipeline-asset.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="///ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/srp-setting-render-pipeline-asset.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/srp-setting-render-pipeline-asset.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/srp-setting-render-pipeline-asset.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/srp-setting-render-pipeline-asset.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/srp-setting-render-pipeline-asset.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/srp-setting-render-pipeline-asset.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/srp-setting-render-pipeline-asset.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/srp-setting-render-pipeline-asset.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/srp-setting-render-pipeline-asset.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/srp-setting-render-pipeline-asset.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/srp-setting-render-pipeline-asset.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/srp-setting-render-pipeline-asset.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/srp-setting-render-pipeline-asset.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/srp-setting-render-pipeline-asset.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/srp-setting-render-pipeline-asset.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/srp-setting-render-pipeline-asset.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/srp-setting-render-pipeline-asset.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/srp-setting-render-pipeline-asset.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/srp-setting-render-pipeline-asset.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/srp-setting-render-pipeline-asset.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2021.2/Documentation/Manual/srp-setting-render-pipeline-asset.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2021.2/Manual/srp-setting-render-pipeline-asset.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2021.2/Manual/srp-setting-render-pipeline-asset.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2021.2/Manual/srp-setting-render-pipeline-asset.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2021.2/Manual/srp-setting-render-pipeline-asset.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2021.2/Manual/srp-setting-render-pipeline-asset.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2021.2</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2022.1" href="/cn/2022.1/Manual/srp-setting-render-pipeline-asset.html">2022.1</a></li>
+<li class="supported"><a class="docs_version_url_2021.3" href="/cn/2021.3/Manual/srp-setting-render-pipeline-asset.html">2021.3</a></li>
+<li class=""><a class="docs_version_url_2021.2" href="/cn/2021.2/Manual/srp-setting-render-pipeline-asset.html">2021.2</a></li>
+<li class=""><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/srp-setting-render-pipeline-asset.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/srp-setting-render-pipeline-asset.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/srp-setting-render-pipeline-asset.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/srp-setting-render-pipeline-asset.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/srp-setting-render-pipeline-asset.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/srp-setting-render-pipeline-asset.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/srp-setting-render-pipeline-asset.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/srp-setting-render-pipeline-asset.html">2019.1</a></li>
+<li class=""><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/srp-setting-render-pipeline-asset.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/srp-setting-render-pipeline-asset.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/srp-setting-render-pipeline-asset.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/srp-setting-render-pipeline-asset.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/srp-setting-render-pipeline-asset.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/srp-setting-render-pipeline-asset.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/srp-setting-render-pipeline-asset.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/srp-setting-render-pipeline-asset.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/srp-setting-render-pipeline-asset.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual 2021.2</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="render-pipelines.html">渲染管线</a></li>
+<li>切换渲染管线</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="render-pipelines-overview.html"></a></span><div class="tip">渲染管线简介</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip">选择和配置渲染管线和光照解决方案</div>
+</div>
+</div></div>
+<h1>切换渲染管线</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面包含有关设置 Unity 当前使用的活动渲染管线的信息。此信息可让您切换到内置渲染管线、通用渲染管线 (URP)、高清渲染管线 (HDRP) 或自定义渲染管线。</p>
+
+<p>请注意，如果要切换到另一个渲染管线，必须确保项目中的资源和代码兼容新的渲染管线实例，否则，可能会遇到错误或意外的视觉效果。</p>
+
+<p>一旦您在 Unity 编辑器中设置了活动渲染管线，Unity 就会开始使用它进行渲染。这包括 Game 视图、Scene 视图，以及 Project 面板和 Inspector 中显示的材质预览。</p>
+
+<h2>激活内置渲染管线</h2>
+
+<p>要将活动渲染管线设置为内置渲染管线，您必须告知 Unity 您未使用任何基于可编程渲染管线的渲染管线。当您从项目设置中删除所有这些引用后，Unity 默认使用内置渲染管线。</p>
+
+<p>为此需要执行以下操作：</p>
+
+<p>1.导航到 <strong>Edit &gt; Project Settings &gt; Quality</strong>，从而打开 Quality Settings 窗口。
+2.对于每个质量级别，将 <strong>Render Pipeline</strong> 字段设置为 <strong>None</strong>。
+3.导航到 <strong>Edit &gt; Project Settings &gt; Graphics</strong>，从而打开 Graphics Settings 窗口。
+4.将 <strong>Scriptable Render Pipeline Setting</strong> 字段设置为 <strong>None</strong>。</p>
+
+<h2>激活基于 SRP 的 URP、HDRP 或自定义渲染管线</h2>
+
+<p>要将活动渲染管线设置为基于 SRP 的渲染管线，您必须告诉 Unity 要使用哪个渲染管线资源。渲染管线资源是一种资源，其中包含有关要使用的渲染管线以及如何配置该渲染管线的数据。</p>
+
+<p>您可以拥有多个渲染管线资源，让 Unity 以不同配置使用同一渲染管线；例如，您可能有一个适合高端硬件的设置，一个适合低端硬件的设置。</p>
+
+<p>有关渲染管线资源的一般介绍，请参阅<a href="scriptable-render-pipeline-introduction.html">可编程渲染管线简介</a>。有关 URP 中渲染管线资源的信息，请参阅<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html?subfolder=/manual/universalrp-asset.html">通用渲染管线资源</a>。有关 HDRP 中渲染管线资源的信息，请参阅<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/HDRP-Asset.html">高清渲染管线资源</a>。</p>
+
+<h3>在 Unity 编辑器中</h3>
+
+<p>1.导航到 <strong>Edit &gt; Project Settings &gt; Graphics</strong>，从而打开 Graphics Settings 窗口。
+2.在 Project 文件夹中，找到要使用的渲染管线的渲染管线资源。
+3.将渲染管线资源拖放到 <strong>Scriptable Render Pipeline Setting</strong> 字段。这样定义了默认渲染管线，在给定质量级别没有覆盖值时，Unity 使用该管线。
+4.可选，要为不同的质量级别使用不同的渲染管线资源：导航到 <strong>Edit &gt; Project Settings &gt; Quality</strong> 打开 Quality Settings 设置窗口。
+5.可选，要为不同的质量级别使用不同的渲染管线资源：对于每个质量级别，将渲染管线资源拖放到 <strong>Render Pipeline</strong> 字段。</p>
+
+<h3>在 C# 代码中</h3>
+
+<p>您可以使用 C#代码设置渲染管线资源。您可以在 Unity 编辑器中以编辑模式或运行模式运行此代码，或者在构建的播放器中在运行时运行此代码。</p>
+
+<p>由于 SRP 是高度可配置的，因此更改活动的渲染管线资源可能会导致更改差异很大（例如从 URP 切换到 HDRP）。在运行时更改渲染管线资源的性能成本相应地有所不同。</p>
+
+<p>请注意，切换到新的渲染管线资源会使 Unity 销毁当前的渲染管线实例，并调用新渲染管线资源的 <code>CreatePipeline()</code> 方法。根据 SRP 中的代码，此操作可能在计算上是资源密集型操作。</p>
+
+<p>以下示例代码显示了如何设置存储在 <a href="../ScriptReference/Rendering.GraphicsSettings-renderPipelineAsset.html">GraphicsSettings.renderPipelineAsset</a> 中的默认渲染管线资源。</p>
+
+<p>请注意，如果您已在项目的 Quality Settings 为渲染管线资源指定了质量级别，则当前质量级别的渲染管线资源将覆盖默认渲染管线资源。您可以如以下代码所示的方式在 C# 代码中使用 <a href="QualitySettings-renderPipeline">QualitySettings-renderPipeline</a> API 进行更新。</p>
+
+<pre><code class="c#">using UnityEngine;
+using UnityEngine.Rendering;
+ 
+public class SwitchRenderPipelineAsset : MonoBehaviour
+{
+    public RenderPipelineAsset exampleAssetA;
+    public RenderPipelineAsset exampleAssetB;
+ 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A)) {
+            GraphicsSettings.renderPipelineAsset = exampleAssetA;
+            Debug.Log("Default render pipeline asset is: " + GraphicsSettings.renderPipelineAsset.name);
+        }
+        else if (Input.GetKeyDown(KeyCode.B)) {
+            GraphicsSettings.renderPipelineAsset = exampleAssetB;
+            Debug.Log("Default render pipeline asset is: " + GraphicsSettings.renderPipelineAsset.name);
+        }
+    }
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="render-pipelines-overview.html"></a></span><div class="tip">渲染管线简介</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip">选择和配置渲染管线和光照解决方案</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2021 Unity Technologies. Publication 2021.2</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
